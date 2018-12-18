@@ -1,4 +1,4 @@
-from utils import boardOutput, isMill, numOfPieces, adjacentLocations, possibleMoves_stage2or3
+from utils import printBoard, isMill, numOfPieces, adjacentLocations, possibleMoves_stage2or3
 import sys
 
 
@@ -7,7 +7,7 @@ def HUMAN_V_HUMAN():
     for i in range(24):
         board.append('x')
 
-    boardOutput(board)
+    printBoard(board)
     for i in range(9):
         # FOR PLAYER 1, STAGE 1
 
@@ -43,7 +43,7 @@ def HUMAN_V_HUMAN():
                 print("Couldn't get the input value!")
                 print(str(e))
 
-        boardOutput(board)
+        printBoard(board)
 
         # FOR PLAYER 2, STAGE 1
 
@@ -79,7 +79,7 @@ def HUMAN_V_HUMAN():
                 print("Couldn't get the input value!")
                 print(str(e))
 
-        boardOutput(board)
+        printBoard(board)
 
     print('\n')
     print("STAGE 2")
@@ -89,7 +89,7 @@ def HUMAN_V_HUMAN():
 
         # PLAYER 1 STAGE 1 MOVE
 
-        boardOutput(board)
+        printBoard(board)
         userMoved = False
         while not userMoved:
             try:
@@ -138,7 +138,7 @@ def HUMAN_V_HUMAN():
                                 userRemoved = False
                                 while not userRemoved:
                                     try:
-                                        boardOutput(board)
+                                        printBoard(board)
                                         removepos1 = int(
                                             input("\n Mill Formed. Remove a '2' piece: "))
 
@@ -174,7 +174,7 @@ def HUMAN_V_HUMAN():
             sys.exit()
 
         else:
-            boardOutput(board)
+            printBoard(board)
 
         # PLAYER 2 STAGE 2 MOVE
 
@@ -226,7 +226,7 @@ def HUMAN_V_HUMAN():
                                 userRemoved = False
                                 while not userRemoved:
                                     try:
-                                        boardOutput(board)
+                                        printBoard(board)
                                         removepos1 = int(
                                             input("\n Mill Formed. Remove a '1' piece: "))
 
@@ -262,7 +262,7 @@ def HUMAN_V_HUMAN():
             sys.exit()
 
         else:
-            boardOutput(board)
+            printBoard(board)
 
 
 if __name__ == "__main__":

@@ -3,7 +3,7 @@
 from copy import deepcopy
 
 
-def boardOutput(board):
+def printBoard(board):
     print(board[0] + "(00)----------------------" + board[1] +
           "(01)----------------------" + board[2] + "(02)")
     print("|                           |                           |")
