@@ -3,7 +3,7 @@
 from copy import deepcopy
 
 
-def boardOutput(board):
+def printBoard(board):
     print(board[0] + "(00)----------------------" + board[1] +
           "(01)----------------------" + board[2] + "(02)")
     print("|                           |                           |")
@@ -273,6 +273,16 @@ def generateInvertedBoardList(pos_list):
     for i in pos_list:
         result.append(InvertedBoard(i))
     return result
+
+
+# Evaluate the board at stages 2 and 3
+def evaluateStage23(board):
+    if numOfPieces(board, "2") <= 2 or numOfPieces(board, "2") == 0:
+        return float('inf')
+    elif numOfPieces(board, '1') <= 2:
+        return float('-inf')
+    else:
+        return 0
 
 
 # Function to find possible mill counts for a certain player.

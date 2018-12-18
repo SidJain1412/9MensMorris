@@ -11,7 +11,7 @@ def AI_VS_AI(heuristic1, heuristic2):
     print("Stage 1")
     for i in range(9):
 
-        boardOutput(board)
+        printBoard(board)
         evalBoard = minimax(
             board, ai_depth, True, alpha, beta, True, heuristic1)
 
@@ -21,7 +21,7 @@ def AI_VS_AI(heuristic1, heuristic2):
         else:
             board = evalBoard.board
 
-        boardOutput(board)
+        printBoard(board)
         evalBoard = minimax(
             board, ai_depth, False, alpha, beta, True, heuristic2)
 
@@ -34,7 +34,7 @@ def AI_VS_AI(heuristic1, heuristic2):
     print("Stage 2")
     while True:
 
-        boardOutput(board)
+        printBoard(board)
         evalBoard = minimax(
             board, ai_depth, True, alpha, beta, False, heuristic1)
 
@@ -44,7 +44,7 @@ def AI_VS_AI(heuristic1, heuristic2):
         else:
             board = evalBoard.board
 
-        boardOutput(board)
+        printBoard(board)
         evaluation = minimax(
             board, ai_depth, False, alpha, beta, False, heuristic2)
 
