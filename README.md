@@ -11,8 +11,9 @@
 ## The AI has been trained based on two heuristics:
 1. Difference in number of pieces.
 2. Possible number of mills formed.
-
+### MiniMax algorithm has been used.
 You can use either one (change line 59 in `AI_vs_AI.py` or line 117 in `AI_vs_human.py`)
 ### Run the program from terminal. example: `python AI_vs_AI.py`
 Feel free to contact me in case of any doubts.
 ## Read included documentation `Nine Men's Morris.docx` for more details.
+This is a valid solution for a CSC384 (University of Toronto) programming assignment.
