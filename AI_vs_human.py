@@ -73,7 +73,7 @@ def AI_vs_human(heuristic):
                         board[pos] = 'x'
                         board[newpos] = '1'
 
-                        if isMill(newpost, board):
+                        if isMill(newpos, board):
                             userRemoved = False
                             while not userRemoved:
                                 try:
