@@ -70,7 +70,7 @@ def AI_vs_human(heuristic):
                     newpos = int(input("'1' New Location: "))
 
                     if board[newpos] == 'x':
-                        board[post] = 'x'
+                        board[pos] = 'x'
                         board[newpos] = '1'
 
                         if isMill(newpost, board):
